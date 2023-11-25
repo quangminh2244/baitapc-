@@ -4,6 +4,11 @@ class SP1{
     protected:
     float phanthuc,phanao;
     public:
+    SP1(){}
+    SP1(float a,float b){
+        phanthuc=a;
+        phanao=b;
+    }
     void nhap();
     void xuat();
     float tinhmodun();
@@ -11,10 +16,7 @@ class SP1{
 class SP2:public SP1{
     public:
     SP2(){}
-    SP2(float a,float b){
-        phanthuc=a;
-        phanao=b;
-    }
+    SP2(float a,float b):SP1(a,b){}
     bool operator=(SP2 a);
     friend bool operator<(SP2 a,SP2 b);
     friend SP2 operator+(SP2 a,SP2 b);
